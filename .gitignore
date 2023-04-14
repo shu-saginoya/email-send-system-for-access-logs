@@ -1,2 +1,5 @@
 attachment/
 send_mail_list.xlsx
+build/
+dist/
+send_mail.spec
