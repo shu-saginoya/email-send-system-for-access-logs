@@ -11,7 +11,7 @@ import os
 import re
 
 #ダイアログなどに表示されるタイトル
-PROGRAM_NAME = "アクセスログメール送信システム"
+PROGRAM_NAME = "一斉メール送信システム"
 
 #対応エクセルファイル名
 EXCEL_NAME = 'send_mail_list.xlsx'
@@ -47,8 +47,9 @@ def file_path(fail_name):
 #実行の確認
 execution_confirmation = mb.askyesno(
     PROGRAM_NAME,
-    '''アクセスログのメールを一斉送信します。
-設置用エクセルファイルと添付ファイルを同じディレクトリに準備してください。
+    f'''メールを一斉送信します。
+設定用エクセルファイル（{EXCEL_NAME}）とすべての添付ファイルを同じディレクトリに準備してください。
+次の操作でそのディレクトリを選択します。
 実行してよろしいですか？'''
 )
 if execution_confirmation == False:
